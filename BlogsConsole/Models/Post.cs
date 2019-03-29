@@ -1,4 +1,9 @@
 ﻿using System;
+using NLog;
+using BlogsConsole.Models;
+using System;
+using System.Linq;
+
 
 namespace BlogsConsole.Models
 {
