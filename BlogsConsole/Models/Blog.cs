@@ -13,5 +13,10 @@ namespace BlogsConsole.Models
         public string Name { get; set; }
 
         public List<Post> Posts { get; set; }
+
+        public override string Display()
+        {
+            return $"Id: {BlogId}\nBlog Name: {Blogname}\n";
+        }
     }
 }

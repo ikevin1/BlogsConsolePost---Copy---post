@@ -93,6 +93,21 @@ namespace BlogsConsole
                         }
 
                     }
+                    else if (choice == "4")
+                    {
+                        var query = dbContext.Blogs.OrderBy(b => b.Name);
+                        //var blog = new Blog { Name = name };
+
+                        Blog MyBlog = dbContext.Blogs.Where(id => id.Name == Blogname).FirstOrDefault();
+                        Console.WriteLine("Total Blogs: " + dbContext.Blogs.Count());                        
+                        Console.WriteLine("0) Total Posts from blogs");
+                        foreach (var item in query)
+                        {
+                            Console.WriteLine("BlogID: {0}\nBlogName: {1}", item.BlogId, item.Name);
+                        }
+                        
+                        }
+                    
                     }
 
                
@@ -105,7 +120,7 @@ namespace BlogsConsole
                 logger.Error(ex.Message);
                 Console.ReadLine();
                 }
-            } while (choice == "1" || choice == "2" || choice == "3");
+            } while (choice == "1" || choice == "2" || choice == "3" || choice == "4");
             Console.WriteLine("Press enter to quit");
             string x = Console.ReadLine();
 
@@ -115,6 +130,7 @@ namespace BlogsConsole
                 Console.WriteLine("1) Display All Blogs");
                 Console.WriteLine("2) Add Blogs");
                 Console.WriteLine("3) Create Post");
+                Console.WriteLine("4) Display All Post");
                 Console.WriteLine("Enter to quit");
                 // input selection
                 choice = Console.ReadLine();

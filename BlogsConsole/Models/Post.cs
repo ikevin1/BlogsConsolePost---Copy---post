@@ -19,5 +19,9 @@ namespace BlogsConsole.Models
         //{
         //    throw new NotImplementedException();
         //}
+        public override string Display()
+        {
+            return $"Id: {BlogId}\nBlog Name: {Blogname}\nTitle: {Title}\nContent: {Content}\n";
+        }
     }
 }
