@@ -15,13 +15,6 @@ namespace BlogsConsole.Models
         public int BlogId { get; set; }
         public Blog Blog { get; set; }
 
-        //public static implicit operator Post(Post v)
-        //{
-        //    throw new NotImplementedException();
-        //}
-        public override string Display()
-        {
-            return $"Id: {BlogId}\nBlog Name: {Blogname}\nTitle: {Title}\nContent: {Content}\n";
-        }
+        
     }
 }
